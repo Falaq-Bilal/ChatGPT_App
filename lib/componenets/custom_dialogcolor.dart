@@ -1,0 +1,75 @@
+import 'package:chatgpt_app/utils/themes.dart';
+import 'package:flutter/material.dart';
+
+class ColorSchemeDialog extends StatefulWidget {
+  final String initialValue;
+
+  const ColorSchemeDialog({Key? key, this.initialValue = "System"})
+      : super(key: key);
+
+  @override
+  State<ColorSchemeDialog> createState() => _ColorSchemeDialogState();
+}
+
+class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
+  late String selectedScheme;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedScheme = widget.initialValue; // default value
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      backgroundColor: Themes.darkgrey,
+      title: Text("Color Scheme" , style: TextStyle(color: Themes.white),),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          RadioListTile<String>(
+            title: Text("System (Default)" , style: TextStyle(color: Themes.white),),
+            value: "System",
+            groupValue: selectedScheme,
+            activeColor: Themes.white,
+            onChanged: (value) {
+              setState(() => selectedScheme = value!);
+            },
+          ),
+          RadioListTile<String>(
+            title: Text("Light" , style: TextStyle(color: Themes.white),),
+            value: "Light",
+            groupValue: selectedScheme,
+            activeColor: Themes.white,
+            onChanged: (value) {
+              setState(() => selectedScheme = value!);
+            },
+          ),
+          RadioListTile<String>(
+            title: Text("Dark" , style: TextStyle(color: Themes.white),),
+            value: "Dark",
+            groupValue: selectedScheme,
+            activeColor: Themes.white,
+            onChanged: (value) {
+              setState(() => selectedScheme = value!);
+            },
+          ),
+        ],
+      ),
+      actions: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context, selectedScheme); // return selected value
+              },
+              child: Text("OK", style: TextStyle(color: Themes.white),),
+            ),
+          ],
+        )
+      ],
+    );
+  }
+}
