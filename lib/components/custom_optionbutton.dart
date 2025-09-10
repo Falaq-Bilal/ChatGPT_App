@@ -30,7 +30,7 @@ class OptionButton extends StatelessWidget {
           children: [
             Center(child: Icon(icon, size: 28, color: Colors.white)),
             SizedBox(height: 8),
-            Text(label, style: TextStyle(color: Themes.white)),
+            Text(label, style: Themes.regular(color: Themes.white)),
           ],
         ),
       ),

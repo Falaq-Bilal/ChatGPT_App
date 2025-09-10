@@ -1,4 +1,5 @@
-import 'package:chatgpt_app/componenets/custom_language.dart';
+
+import 'package:chatgpt_app/components/custom_language.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/settings_screen.dart';
 import 'package:chatgpt_app/view/voice_screen_2.dart';
@@ -15,12 +16,12 @@ class VoiceScreen extends StatelessWidget {
         backgroundColor: Themes.black,
         scrolledUnderElevation: 0,
         leading: IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> SettingsScreen()));}, icon: Icon(Icons.arrow_back , color: Themes.white,)),
-        title: Text("Speech" ,   style: TextStyle(color: Themes.white)),
+        title: Text("Speech" ,   style: Themes.regular(color: Themes.white)),
       ),
       body: ListView(children: [
           LanguageTile(), 
         ListTile(
-          title: Text("For best results, select the language you mainly speak. If its's not listed, it may still be supported via auto-detection." , style: TextStyle(fontSize: 15 , color: Themes.white),),
+          title: Text("For best results, select the language you mainly speak. If its's not listed, it may still be supported via auto-detection." , style: Themes.regular(fontSize: 15 , color: Themes.white),),
      
         ),
         ListTile(
@@ -28,8 +29,8 @@ class VoiceScreen extends StatelessWidget {
             backgroundColor: Themes.black,
             child: Icon(Icons.voice_chat , color: Themes.white,),
           ),
-          title: Text("Voice" , style: TextStyle(color: Themes.white)),
-          subtitle: Text("Breeze" , style: TextStyle(color: Themes.white)),
+          title: Text("Voice" , style: Themes.regular(color: Themes.white)),
+          subtitle: Text("Breeze" , style: Themes.regular(color: Themes.white)),
           onTap: (){Navigator.pop(context);
           Navigator.push(context, MaterialPageRoute(builder: (context)=>VoiceScreen2()));},
         ),
@@ -38,8 +39,8 @@ class VoiceScreen extends StatelessWidget {
             backgroundColor: Themes.black,
             child: Icon(Icons.chat_bubble_outline_outlined , color: Themes.white,),
           ),
-          title: Text("Background Conversations" , style: TextStyle(color: Themes.white)),
-          subtitle: Text("Keep the conversation going in other apps or while your screen is off." , style: TextStyle(color: Themes.white)),
+          title: Text("Background Conversations" , style: Themes.regular(color: Themes.white)),
+          subtitle: Text("Keep the conversation going in other apps or while your screen is off." , style: Themes.regular(color: Themes.white)),
           trailing: Container(
                         height: 25,
                         width: 45,
@@ -66,8 +67,8 @@ class VoiceScreen extends StatelessWidget {
             backgroundColor: Themes.black,
             child: Icon(Icons.blur_circular , color: Themes.white,),
           ),
-          title: Text("Use as Default Assistant" , style: TextStyle(color: Themes.white)),
-          subtitle: Text("Set ChatGPT as your default digital assistant in your Android settings." , style: TextStyle(color: Themes.white)),
+          title: Text("Use as Default Assistant" , style: Themes.regular(color: Themes.white)),
+          subtitle: Text("Set ChatGPT as your default digital assistant in your Android settings." , style: Themes.regular(color: Themes.white)),
           trailing: Container(
                         height: 25,
                         width: 45,

@@ -28,8 +28,8 @@ class _AccentColorTileState extends State<CustomPopupmenu> {
         backgroundColor: Themes.black,
         child: Icon(Icons.brush , color: Themes.white,),
       ),
-      title: const Text("Accent Color", style: TextStyle(fontSize: 17 ,  color: Themes.white)),
-      subtitle: Text(selected , style: TextStyle(color: Themes.white),),
+      title:  Text("Accent Color", style: Themes.regular(fontSize: 17 ,  color: Themes.white)),
+      subtitle: Text(selected , style: Themes.regular(color: Themes.white),),
       trailing: PopupMenuButton<String>(
         color: Themes.darkgrey,
         borderRadius: BorderRadius.circular(30),
@@ -49,7 +49,7 @@ class _AccentColorTileState extends State<CustomPopupmenu> {
                 children: [
                   CircleAvatar(backgroundColor: entry.value, radius: 8),
                   const SizedBox(width: 10),
-                  Text(entry.key , style: TextStyle(color: Themes.white),),
+                  Text(entry.key , style: Themes.regular(color: Themes.white),),
                   if (selected == entry.key) ...[
                     const Spacer(),
                     const Icon(Icons.check, size: 18, color: Colors.white),

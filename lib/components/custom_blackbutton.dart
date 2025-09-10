@@ -19,7 +19,7 @@ class BlackButton extends StatelessWidget {
         foregroundColor: Colors.white,   // White text
         padding: const EdgeInsets.symmetric(
        horizontal: 10,// left/right padding
-          vertical: 20,   // top/bottom padding
+          vertical: 15,   // top/bottom padding
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30),
@@ -30,7 +30,7 @@ class BlackButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        style:  Themes.semiBold(fontSize: 16),
       ),
     );
   }

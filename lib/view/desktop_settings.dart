@@ -9,8 +9,8 @@ import 'package:chatgpt_app/view/upgrade_screen.dart';
 import 'package:chatgpt_app/view/voice_screen.dart';
 import 'package:flutter/material.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+class DesktopSettings extends StatelessWidget {
+  const DesktopSettings({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,71 +23,29 @@ class SettingsScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back, color: Themes.white),
           onPressed: () {
             Navigator.pop(context);
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
-            );
           },
         ),
-        title: Text(
-          "Settings",
-          style: Themes.semiBold(
-            fontSize: 20,
-         //   fontWeight: FontWeight.bold,
-            color: Themes.white,
-          ),
-        ),
+       
       ),
 
       body: ListView(
         children: [
           ListTile(
             leading: CircleAvatar(
-              backgroundColor: Themes.darkgrey,
-              child: Text(
-                "FA",
-                style: Themes.regular(fontSize: 15, color: Themes.white),
-              ),
+              backgroundColor: Themes.black,
+              child: Icon(Icons.settings , color: Themes.white,),
             ),
-            title: Text(
-              "Falaq",
-              style: Themes.regular(fontSize: 15, color: Themes.white),
-            ),
+            title: Text("General" , style: Themes.regular(color: Themes.black),)
           ),
-          ListTile(
+            ListTile(
             leading: CircleAvatar(
               backgroundColor: Themes.black,
-              child: Icon(Icons.email_outlined, color: Themes.white),
+              child: Icon(Icons.notifications_none , color: Themes.white,),
             ),
-            title: Text(
-              "Email",
-              style: Themes.regular(fontSize: 15, color: Themes.white),
-            ),
-            subtitle: Text(
-              "falaqdevsinn@gmail.com",
-              style: Themes.regular(fontSize: 12, color: Themes.white),
-            ),
+            title: Text("Notifications" , style: Themes.regular(color: Themes.black),)
           ),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Themes.black,
-              child: Icon(
-                Icons.workspace_premium_outlined,
-                color: Themes.white,
-              ),
-            ),
-            title: Text(
-              "Upgrade to Plus",
-              style: Themes.regular(fontSize: 15, color: Themes.white),
-            ),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => UpgradeScreen()),
-              );
-            },
-          ),
+          
+          
 
           ListTile(
             leading: CircleAvatar(
@@ -106,6 +64,13 @@ class SettingsScreen extends StatelessWidget {
               );
             },
           ),
+            ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Themes.black,
+              backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDRHWUEkQklIPAQ7-TXHUjU1XQ_zaBndhQg&s"),
+            ),
+            title: Text("Connected apps" , style: Themes.regular(color: Themes.black),)
+          ),
           ListTile(
             leading: CircleAvatar(
               backgroundColor: Themes.black,
@@ -123,23 +88,7 @@ class SettingsScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Themes.black,
-              child: Icon(Icons.voice_chat, color: Themes.white),
-            ),
-            title: Text(
-              "Voice",
-              style: Themes.regular(fontSize: 15, color: Themes.white),
-            ),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => VoiceScreen()),
-              );
-            },
-          ),
+         
           ListTile(
             leading: CircleAvatar(
               backgroundColor: Themes.black,
@@ -163,7 +112,7 @@ class SettingsScreen extends StatelessWidget {
               child: Icon(Icons.info_outline, color: Themes.white),
             ),
             title: Text(
-              "About",
+              "Account",
               style: Themes.regular(fontSize: 15, color: Themes.white),
             ),
             onTap: () {
@@ -174,16 +123,7 @@ class SettingsScreen extends StatelessWidget {
               );
             },
           ),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Themes.black,
-              child: Icon(Icons.logout, color: Themes.red),
-            ),
-            title: Text(
-              "Sign Out",
-              style: Themes.regular(fontSize: 15, color: Themes.white),
-            ),
-          ),
+          
         ],
       ),
     );

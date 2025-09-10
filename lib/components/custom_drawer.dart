@@ -24,7 +24,7 @@ class MyCustomDrawer extends StatelessWidget {
                     filled: true,
                     fillColor: Themes.darkgrey,
                     
-                   label: Text("Search" , style: TextStyle(fontSize: 18 , color: Themes.white),),
+                   label: Text("Search" , style: Themes.textStyle(fontSize: 18 , color: Themes.white),),
                     prefixIcon: const Icon(Icons.search , color: Themes.white,),
                     border: OutlineInputBorder(
                       
@@ -50,31 +50,32 @@ class MyCustomDrawer extends StatelessWidget {
       
             Expanded(
               child: ListView(
-                children: const [
+                children:  [
                   ListTile(
                     leading: Icon(Icons.note_alt_outlined,color: Themes.white,),
-                    title: Text("New Chat",style: TextStyle(fontSize: 15 , color: Themes.white)),
+                    title: Text("New Chat", 
+                    style: Themes.regular(fontSize: 15 , color: Themes.white)),
                   ),
                   ListTile(
                     leading: Icon(Icons.library_music , color: Themes.white,),
-                    title: Text("Library",style: TextStyle(fontSize: 15 , color: Themes.white)),
+                    title: Text("Library",style: Themes.regular(fontSize: 15 , color: Themes.white)),
                   ),
                   ListTile(
                     leading: Image(
                       image: NetworkImage(
-                        "https://tse2.mm.bing.net/th/id/OIP.qRPF0BZXUlHRwGClJ-2v0QAAAA?pid=Api&P=0&h=220", 
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEWm9r6BEttA05IH0uOlgQ_hfFOwbkNB4bsg&s", 
                       ),
                       height: 20, fit: BoxFit.fill,
                     ),
-                    title: Text("GPTs",style: TextStyle(fontSize: 15 , color: Themes.white),)
+                    title: Text("GPTs",style: Themes.regular(fontSize: 15 , color: Themes.white),)
                   ),
                   SizedBox(height: 10,),
                   ListTile(
-                    title: Text("What are widgets?" ,style: TextStyle(fontSize: 15 ,  color: Themes.white)),
+                    title: Text("What are widgets?" ,style: Themes.regular(fontSize: 15 ,  color: Themes.white)),
                   ),
 
                   ListTile(
-                    title: Text("Role of Scaffold in Flutter" , style: TextStyle(fontSize: 15 , color: Themes.white),),
+                    title: Text("Role of Scaffold in Flutter" , style: Themes.regular(fontSize: 15 , color: Themes.white),),
                   )
                 ],
               ),
@@ -102,19 +103,19 @@ class MyCustomDrawer extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    const CircleAvatar(
+                     CircleAvatar(
                       radius: 24,
                       backgroundColor: Themes.darkgrey,
-                      child: Text("FA" , style: TextStyle(fontSize: 18 ,   color: Themes.white),),
+                      child: Text("FA" , style: Themes.regular(fontSize: 18 ,   color: Themes.white),),
                       
                     ),
                     const SizedBox(width: 12),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children:  [
                         Text(
                           "Falaq",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16 , color: Themes.white),
+                          style: Themes.semiBold( fontSize: 16 , color: Themes.white),
                         ),
                      
                       ],

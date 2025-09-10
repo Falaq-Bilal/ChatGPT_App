@@ -24,12 +24,12 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: Themes.darkgrey,
-      title: Text("Color Scheme" , style: TextStyle(color: Themes.white),),
+      title: Text("Color Scheme" , style: Themes.regular(color: Themes.white),),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           RadioListTile<String>(
-            title: Text("System (Default)" , style: TextStyle(color: Themes.white),),
+            title: Text("System (Default)" , style: Themes.regular(color: Themes.white),),
             value: "System",
             groupValue: selectedScheme,
             activeColor: Themes.white,
@@ -38,7 +38,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
             },
           ),
           RadioListTile<String>(
-            title: Text("Light" , style: TextStyle(color: Themes.white),),
+            title: Text("Light" , style: Themes.regular(color: Themes.white),),
             value: "Light",
             groupValue: selectedScheme,
             activeColor: Themes.white,
@@ -47,7 +47,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
             },
           ),
           RadioListTile<String>(
-            title: Text("Dark" , style: TextStyle(color: Themes.white),),
+            title: Text("Dark" , style: Themes.regular(color: Themes.white),),
             value: "Dark",
             groupValue: selectedScheme,
             activeColor: Themes.white,
@@ -65,7 +65,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
               onPressed: () {
                 Navigator.pop(context, selectedScheme); // return selected value
               },
-              child: Text("OK", style: TextStyle(color: Themes.white),),
+              child: Text("OK", style: Themes.regular(color: Themes.white),),
             ),
           ],
         )

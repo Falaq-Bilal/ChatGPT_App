@@ -53,9 +53,10 @@ class WhiteButton extends StatelessWidget {
         Flexible( // 👈 text overflow handle karega
           child: Text(
             text,
-            style: TextStyle(
+            style: Themes.regular(
               fontSize: 16,
-              fontWeight: FontWeight.normal,
+              color: Themes.black
+            //  fontWeight: FontWeight.normal,
             ),
             overflow: TextOverflow.ellipsis, // agar text lamba ho
           ),

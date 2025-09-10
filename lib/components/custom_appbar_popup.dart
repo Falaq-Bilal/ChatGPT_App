@@ -1,4 +1,6 @@
-import 'package:chatgpt_app/componenets/custom_report.dart';
+
+import 'package:chatgpt_app/components/custom_report.dart';
+import 'package:chatgpt_app/view/report_dialog.dart';
 import 'package:chatgpt_app/view/share_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:chatgpt_app/utils/themes.dart';
@@ -32,14 +34,14 @@ class MoreOptionsMenu extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16),
                     ),
                     content: TextField(
-                      style: TextStyle(color: Themes.white),
+                      style: Themes.regular(color: Themes.white),
                       onChanged: (val) {
                         newName = val;
                       },
                       decoration: InputDecoration(
                         label: Text(
                           "New name",
-                          style: TextStyle(color: Themes.white),
+                          style: Themes.regular(color: Themes.white),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Themes.white),
@@ -52,7 +54,7 @@ class MoreOptionsMenu extends StatelessWidget {
                         onPressed: () => Navigator.pop(context),
                         child: Text(
                           "Cancel",
-                          style: TextStyle(color: Themes.white),
+                          style: Themes.regular(color: Themes.white),
                         ),
                       ),
                       TextButton(
@@ -64,7 +66,7 @@ class MoreOptionsMenu extends StatelessWidget {
                         },
                         child: Text(
                           "Rename",
-                          style: TextStyle(color: Themes.grey),
+                          style: Themes.regular(color: Themes.grey),
                         ),
                       ),
                     ],
@@ -87,7 +89,7 @@ class MoreOptionsMenu extends StatelessWidget {
                 
                 content: Text(
                   "Are you sure you want to delete this chat?\n\nTo clear any memories from this chat, visit your settings.",
-                  style: TextStyle(
+                  style: Themes.regular(
                     color: Themes.white,
                     fontSize: 14,
                   ),
@@ -96,11 +98,11 @@ class MoreOptionsMenu extends StatelessWidget {
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text("Cancel", style: TextStyle(color: Themes.white)),
+                    child: Text("Cancel", style: Themes.textStyle(color: Themes.white)),
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text("Delete", style: TextStyle(color: Themes.red)),
+                    child: Text("Delete", style: Themes.textStyle(color: Themes.red)),
                   ),
                
                 ],
@@ -121,7 +123,7 @@ class MoreOptionsMenu extends StatelessWidget {
             children: [
               Icon(Icons.share, color: Themes.white, size: 18),
               SizedBox(width: 8),
-              Text("Share", style: TextStyle(color: Themes.white)),
+              Text("Share", style: Themes.regular(color: Themes.white)),
             ],
           ),
         ),
@@ -131,7 +133,7 @@ class MoreOptionsMenu extends StatelessWidget {
             children: [
               Icon(Icons.edit, color: Themes.white, size: 18),
               SizedBox(width: 8),
-              Text("Rename", style: TextStyle(color: Themes.white)),
+              Text("Rename", style: Themes.regular(color: Themes.white)),
             ],
           ),
         ),
@@ -141,7 +143,7 @@ class MoreOptionsMenu extends StatelessWidget {
             children: [
               Icon(Icons.archive, color: Themes.white, size: 18),
               SizedBox(width: 8),
-              Text("Archive", style: TextStyle(color: Themes.white)),
+              Text("Archive", style: Themes.regular(color: Themes.white)),
             ],
           ),
         ),
@@ -151,7 +153,7 @@ class MoreOptionsMenu extends StatelessWidget {
             children: [
               Icon(Icons.delete, color: Themes.red, size: 18),
               SizedBox(width: 8),
-              Text("Delete", style: TextStyle(color: Themes.red)),
+              Text("Delete", style: Themes.regular(color: Themes.red)),
             ],
           ),
         ),
@@ -161,7 +163,7 @@ class MoreOptionsMenu extends StatelessWidget {
             children: [
               Icon(Icons.flag_outlined, color: Themes.white, size: 18),
               SizedBox(width: 8),
-              Text("Report", style: TextStyle(color: Themes.white)),
+              Text("Report", style: Themes.regular(color: Themes.white)),
             ],
           ),
         ),

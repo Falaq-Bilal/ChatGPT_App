@@ -1,4 +1,5 @@
-import 'package:chatgpt_app/componenets/custom_whitebutton.dart';
+
+import 'package:chatgpt_app/components/custom_whitebutton.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class ShareScreen extends StatelessWidget {
         }, icon: Icon(Icons.arrow_back , color: Themes.white,)),
         title: Text(
           "Share link to chat",
-          style: TextStyle(color: Colors.white),
+          style: Themes.regular(color: Colors.white),
         ),
       ),
       body: Padding(
@@ -27,12 +28,12 @@ class ShareScreen extends StatelessWidget {
           children: [
             Text(
               "Messages sent or received after sharing your link won't be shared. Anyone with the URL will be able to view your shared chat.",
-              style: TextStyle(color: Themes.white, fontSize: 14),
+              style: Themes.regular(color: Themes.white, fontSize: 14),
             ),
             SizedBox(height: 10),
             Text(
               "Recipients won’t be able to view your custom profiles.",
-              style: TextStyle(color: Themes.white, fontSize: 14),
+              style: Themes.regular(color: Themes.white, fontSize: 14),
             ),
             SizedBox(height: 20),
             Container(
@@ -54,19 +55,19 @@ class ShareScreen extends StatelessWidget {
                       ),
                       child: Text(
                         "What is flutter?",
-                        style: TextStyle(color: Colors.white),
+                        style: Themes.regular(color: Colors.white),
                       ),
                     ),
                   ),
                   SizedBox(height: 10),
                   Text(
                     "Flutter is an open-source UI (User Interface) framework developed by Google for building natively compiled applications...",
-                    style: TextStyle(color: Colors.white, fontSize: 14),
+                    style: Themes.regular(color: Colors.white, fontSize: 14),
                   ),
                   SizedBox(height: 10),
                   Text(
                     "What is Flutter\nAnonymous · 2 Sept 2025 3:59:48 pm",
-                    style: TextStyle(color: Themes.white, fontSize: 12),
+                    style: Themes.regular(color: Themes.white, fontSize: 12),
                   ),
                 ],
               ),

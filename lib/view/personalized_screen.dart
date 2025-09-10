@@ -1,6 +1,7 @@
-import 'package:chatgpt_app/componenets/custom_dialogcolor.dart';
-import 'package:chatgpt_app/componenets/custom_languagedialog.dart';
-import 'package:chatgpt_app/componenets/custom_popupmenu.dart';
+
+import 'package:chatgpt_app/components/custom_dialogcolor.dart';
+import 'package:chatgpt_app/components/custom_languagedialog.dart';
+import 'package:chatgpt_app/components/custom_popupmenu.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/instruction_screen.dart';
 import 'package:chatgpt_app/view/memory_screen.dart';
@@ -28,7 +29,7 @@ class PersonalizedScreen extends StatelessWidget {
         ),
         title: Text(
           "Personalization",
-          style: TextStyle(fontSize: 20, color: Themes.white),
+          style: Themes.regular(fontSize: 20, color: Themes.white),
         ),
       ),
 
@@ -41,7 +42,7 @@ class PersonalizedScreen extends StatelessWidget {
             ),
             title: Text(
               "Memory",
-              style: TextStyle(fontSize: 17, color: Themes.white ,),
+              style: Themes.regular(fontSize: 17, color: Themes.white ,),
             ),
             onTap: () {
               Navigator.push(
@@ -57,7 +58,7 @@ class PersonalizedScreen extends StatelessWidget {
             ),
             title: Text(
               "Custom Instructions",
-              style: TextStyle(fontSize: 17, color: Themes.white ,),
+              style: Themes.regular(fontSize: 17, color: Themes.white ,),
             ),
             onTap: () {
               Navigator.push(
@@ -73,9 +74,9 @@ class PersonalizedScreen extends StatelessWidget {
             ),
             title: Text(
               "Color Scheme",
-              style: TextStyle(fontSize: 17, color: Themes.white ,),
+              style: Themes.regular(fontSize: 17, color: Themes.white ,),
             ),
-            subtitle: Text("System (Default)" , style: TextStyle(color: Themes.white),),
+            subtitle: Text("System (Default)" , style: Themes.regular(color: Themes.white),),
             onTap: () async {
               final result = await showDialog<String>(
                 context: context,
@@ -91,9 +92,9 @@ class PersonalizedScreen extends StatelessWidget {
             ),
             title: Text(
               "Language",
-              style: TextStyle(fontSize: 17, color: Themes.white ,),
+              style: Themes.regular(fontSize: 17, color: Themes.white ,),
             ),
-            subtitle: Text("English" , style: TextStyle(color: Themes.white),),
+            subtitle: Text("English" , style: Themes.regular(color: Themes.white),),
             onTap: () async {
               final result = await showDialog<String>(
                 context: context,

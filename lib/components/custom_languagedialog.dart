@@ -34,14 +34,14 @@ class _LanguageDialogState extends State<CustomLanguagedialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("App Language" , style: TextStyle(color: Themes.white),),
+      title: Text("App Language" , style: Themes.regular(color: Themes.white),),
       backgroundColor: Themes.darkgrey,
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: languages.map((lang) {
             return RadioListTile<String>(
-              title: Text(lang  , style: TextStyle(color: Themes.white),),
+              title: Text(lang  , style: Themes.regular(color: Themes.white),),
               value: lang,
               groupValue: selected,
               activeColor: Themes.white,
@@ -63,7 +63,7 @@ class _LanguageDialogState extends State<CustomLanguagedialog> {
               onPressed: () {
                 Navigator.pop(context, selected); 
               },
-              child: const Text("OK" ,  style: TextStyle(color: Themes.white),)
+              child:  Text("OK" ,  style: Themes.regular(color: Themes.white),)
             ),
           ],
         ),

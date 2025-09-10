@@ -1,4 +1,5 @@
-import 'package:chatgpt_app/componenets/custom_whitebutton.dart';
+
+import 'package:chatgpt_app/components/custom_whitebutton.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/personalized_screen.dart';
 import 'package:flutter/material.dart';
@@ -32,21 +33,21 @@ class InstructionScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Introducing",
-                    style: TextStyle(fontSize: 24, color: Themes.white),
+                    style: Themes.textStyle(fontSize: 24, color: Themes.white),
                   ),
                   SizedBox(height: 5),
                   Text("Custom",
-                      style: TextStyle(fontSize: 24, color: Themes.white)),
+                      style: Themes.textStyle(fontSize: 24, color: Themes.white)),
                   SizedBox(height: 5),
                   Text(
                     "Instructions",
-                    style: TextStyle(fontSize: 24, color: Themes.white),
+                    style: Themes.textStyle(fontSize: 24, color: Themes.white),
                   ),
                   SizedBox(height: 20),
                   Text(
                     "Customize your interactions with ChatGPT by providing specific details and guidelines for your chats.",
                     style:
-                        TextStyle(fontSize: 15, color: Themes.darkgrey),
+                        Themes.textStyle(fontSize: 15, color: Themes.darkgrey),
                   ),
                   SizedBox(height: 20),
                   ListTile(
@@ -54,7 +55,7 @@ class InstructionScreen extends StatelessWidget {
                       backgroundColor: Themes.black,
                       child: Icon(Icons.chat_bubble_outline , color: Themes.white,),
                     ),
-                    title: Text("Active for new chats" , style: TextStyle(color: Themes.white),),
+                    title: Text("Active for new chats" , style: Themes.textStyle(color: Themes.white),),
                     subtitle: Text(
                         "Whenever you edit your custom instructions, they'll take effect in all new chats you create. Older conversations won't be updated" , style: TextStyle(color: Themes.white),),
                   ),
@@ -63,9 +64,9 @@ class InstructionScreen extends StatelessWidget {
                       backgroundColor: Themes.black,
                       child: Icon(Icons.play_circle_outlined , color: Themes.white,),
                     ),
-                    title: Text("Help improve our models" , style: TextStyle(color: Themes.white),),
+                    title: Text("Help improve our models" , style: Themes.textStyle(color: Themes.white),),
                     subtitle: Text(
-                        "Your instructions will make our models better. Visit our Help Center to learn more about how your data will be used" , style: TextStyle(color: Themes.white),),
+                        "Your instructions will make our models better. Visit our Help Center to learn more about how your data will be used" , style: Themes.textStyle(color: Themes.white),),
                   ),
                 ],
               ),

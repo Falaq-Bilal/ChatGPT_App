@@ -26,12 +26,12 @@ class _LanguageTileState extends State<LanguageTile> {
         String temp = selectedLanguage;
         return AlertDialog(
           backgroundColor: Themes.darkgrey,
-          title: const Text("Input Language"  , style: TextStyle(color: Themes.white)),
+          title:  Text("Input Language"  , style: Themes.regular(color: Themes.white)),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: languages.map((lang) {
               return RadioListTile(
-                title: Text(lang  , style: TextStyle(color: Themes.white)),
+                title: Text(lang  , style: Themes.regular(color: Themes.white)),
                 value: lang,
                 groupValue: temp,
                 activeColor: Themes.white,
@@ -43,7 +43,7 @@ class _LanguageTileState extends State<LanguageTile> {
           ),
           actions: [
             TextButton(
-              child: const Text("OK"  , style: TextStyle(color: Themes.white)),
+              child:  Text("OK"  , style: Themes.regular(color: Themes.white)),
               onPressed: () {
                 setState(() => selectedLanguage = temp);
                 Navigator.pop(context);
@@ -62,8 +62,8 @@ class _LanguageTileState extends State<LanguageTile> {
         backgroundColor: Themes.black,
         child: Icon(Icons.mic , color: Themes.white,),
       ),
-      title: const Text("Input Language"  , style: TextStyle(color: Themes.white)),
-      subtitle: Text(selectedLanguage , style: TextStyle(color: Themes.white),),
+      title:  Text("Input Language"  , style: Themes.regular(color: Themes.white)),
+      subtitle: Text(selectedLanguage , style: Themes.regular(color: Themes.white),),
       onTap: _showDialog,
     );
   }

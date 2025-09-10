@@ -1,7 +1,8 @@
-import 'package:chatgpt_app/componenets/custom_archive.dart';
-import 'package:chatgpt_app/componenets/custom_clearchat.dart';
-import 'package:chatgpt_app/componenets/custom_delete_acc.dart';
-import 'package:chatgpt_app/componenets/custom_export.dart';
+
+import 'package:chatgpt_app/components/custom_archive.dart';
+import 'package:chatgpt_app/components/custom_clearchat.dart';
+import 'package:chatgpt_app/components/custom_delete_acc.dart';
+import 'package:chatgpt_app/components/custom_export.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class DataControlScreen extends StatelessWidget {
         child: ListView(
           children: [
             ListTile(
-              title: Text("Improve the model for everyone" , style: TextStyle(color: Themes.white),),
+              title: Text("Improve the model for everyone" , style: Themes.textStyle(color: Themes.white),),
               trailing: Container(
                 height: 25,
                 width: 45,
@@ -56,14 +57,14 @@ class DataControlScreen extends StatelessWidget {
             ListTile(
               title: Text(
                 "Allow your content to be used to train our models, which makes ChatGPT better for you and everyone who uses it. We take steps to protect your privacy. Learn more",
-                style: TextStyle(fontSize: 15, color: Themes.white),
+                style: Themes.textStyle(fontSize: 15, color: Themes.white),
               ),
             ),
             SizedBox(height: 7),
             ListTile(
               title: Text(
                 "Voice Mode",
-                style: TextStyle(
+                style: Themes.textStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Themes.white,
@@ -73,7 +74,7 @@ class DataControlScreen extends StatelessWidget {
             SizedBox(height: 15),
 
             ListTile(
-              title: Text("Include your audio recordings" , style: TextStyle(color: Themes.white)),
+              title: Text("Include your audio recordings" , style: Themes.textStyle(color: Themes.white)),
               trailing: Container(
                 height: 25,
                 width: 45,
@@ -99,14 +100,14 @@ class DataControlScreen extends StatelessWidget {
             ListTile(
               title: Text(
                 "Include your audio recordings from voice mode to train our models. Transcripts and other files are covered by Improve the model for everyone. Learn more",
-                style: TextStyle(fontSize: 15, color: Themes.white),
+                style: Themes.textStyle(fontSize: 15, color: Themes.white),
               ),
             ),
             SizedBox(height: 20),
             ListTile(
               title: Text(
                 "Chat History",
-                style: TextStyle(
+                style: Themes.textStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
                   color: Themes.white
@@ -114,7 +115,7 @@ class DataControlScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            ListTile(title: Text("View archived Chats"  , style: TextStyle(color: Themes.white))),
+            ListTile(title: Text("View archived Chats"  , style: Themes.textStyle(color: Themes.white))),
             SizedBox(height: 20),
             CustomArchive(),
             SizedBox(height: 20),
@@ -123,7 +124,7 @@ class DataControlScreen extends StatelessWidget {
             ListTile(
               title: Text(
                 "Account",
-                style: TextStyle(
+                style: Themes.textStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
                   color: Themes.white,

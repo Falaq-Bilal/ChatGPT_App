@@ -1,8 +1,7 @@
 import 'dart:js_interop';
 
-import 'package:chatgpt_app/componenets/custom_blackbutton.dart';
-import 'package:chatgpt_app/componenets/custom_sizedbox.dart';
-import 'package:chatgpt_app/componenets/custom_whitebutton.dart' show WhiteButton;
+import 'package:chatgpt_app/components/custom_blackbutton.dart';
+import 'package:chatgpt_app/components/custom_whitebutton.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,9 +24,9 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: Text(
                 "ChatGPT",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
+                style: Themes.textStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
                   color: Themes.black,
                 ),
               ),
@@ -36,8 +35,8 @@ class LoginScreen extends StatelessWidget {
 
             Center(
               child: Text(
-                "Log in or sign up",
-                style: TextStyle(
+                "Log in or Sign Up",
+                style: Themes.textStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.bold,
                   color: Themes.black,
@@ -49,9 +48,9 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: Text(
                 "You'll get smarter responses and can upload files, images and more.",
-                style: TextStyle(
+                style: Themes.regular(
                   fontSize: 15,
-                  fontWeight: FontWeight.normal,
+                 // fontWeight: FontWeight.w400,
                   color: Themes.darkgrey,
                 ),
               ),
@@ -64,7 +63,7 @@ class LoginScreen extends StatelessWidget {
               controller: emailController,
               decoration: InputDecoration(
                 label: const Text("Email address"),
-                labelStyle: TextStyle(color: Themes.blue),
+                labelStyle: Themes.regular(color: Themes.blue),
                 border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                 ),

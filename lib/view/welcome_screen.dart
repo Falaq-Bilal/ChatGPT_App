@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:chatgpt_app/componenets/custom_blackbutton.dart';
-import 'package:chatgpt_app/componenets/custom_whitebutton.dart';
+import 'package:chatgpt_app/components/custom_blackbutton.dart';
+import 'package:chatgpt_app/components/custom_whitebutton.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'package:chatgpt_app/view/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -68,13 +68,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Center(
               child: AnimatedSwitcher(
                 duration: Duration(seconds: 1),
-                child: Text(
-                  _texts[_index],
-                  key: ValueKey(_texts[_index]),
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: _textColors[_index], // text color change hoga
+                child: Center(
+                  child: Text(
+                    _texts[_index],
+                    key: ValueKey(_texts[_index]),
+                    style: Themes.semiBold(
+                      fontSize: 28,
+                  
+                      color: _textColors[_index], // text color change hoga
+                    ),
                   ),
                 ),
               ),
@@ -104,10 +106,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       shape: StadiumBorder(),
                       padding: EdgeInsets.symmetric(vertical: 15),
                     ),
-                    child: Text("Sign up"),
+                    child: Text("Sign up" , style: Themes.regular(color: Themes.white),),
                     onPressed: () {},
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 25),
 
                     BlackButton(text: "Log in", onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));}),
                   

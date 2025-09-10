@@ -14,11 +14,11 @@ class SecurityScreen extends StatelessWidget {
         scrolledUnderElevation: 0,
         leading: IconButton(onPressed: (){Navigator.pop(context);
         Navigator.push(context, MaterialPageRoute(builder: (context)=> SettingsScreen()));}, icon: Icon(Icons.arrow_back , color: Themes.white,)),
-        title: Text("Security"  , style: TextStyle(color: Themes.white)),
+        title: Text("Security"  , style: Themes.regular(color: Themes.white)),
       ),
       body: ListTile(
-        title: Text("Multi-factor authentication" , style: TextStyle(color: Themes.white , fontWeight: FontWeight.bold),),
-        subtitle: Text("Require an extra security challenge when logging in. If you are unable to pass this challenge, you will have the option to recover your account via email" , style: TextStyle(color: Themes.white, fontSize: 12),),
+        title: Text("Multi-factor authentication" , style: Themes.semiBold(color: Themes.white),),
+        subtitle: Text("Require an extra security challenge when logging in. If you are unable to pass this challenge, you will have the option to recover your account via email" , style: Themes.regular(color: Themes.white, fontSize: 12),),
         trailing: Container(
                         height: 25,
                         width: 45,

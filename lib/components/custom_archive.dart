@@ -10,21 +10,21 @@ class CustomArchive extends StatelessWidget {
       builder: (context) {
         return AlertDialog(
           backgroundColor: Themes.darkgrey,
-          content: const Text("All your chats will be archived." , style: TextStyle(color: Themes.white)),
+          content:  Text("All your chats will be archived." , style: Themes.regular(color: Themes.white)),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context), // dialog close
-              child: const Text("Cancel" , style: TextStyle(color: Themes.white),),
+              child:  Text("Cancel" , style: Themes.regular(color: Themes.white),),
             ),
             TextButton(
               onPressed: () {
                 Navigator.pop(context); // close dialog
                 // yahan apna archive logic likho
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("Chats Archived!" , style: TextStyle(color: Themes.white))),
+                   SnackBar(content: Text("Chats Archived!" , style: Themes.regular(color: Themes.white))),
                 );
               },
-              child: const Text("Archive Chat History" , style: TextStyle(color: Themes.white),),
+              child:  Text("Archive Chat History" , style: Themes.regular(color: Themes.white),),
             ),
           ],
         );
@@ -39,7 +39,7 @@ class CustomArchive extends StatelessWidget {
         child:  ListTile(
           title: Text(
             "Archive Chat History",
-            style: TextStyle(fontSize: 15, color: Themes.white),
+            style: Themes.regular(fontSize: 15, color: Themes.white),
             textAlign: TextAlign.left,
           ),
         ),
