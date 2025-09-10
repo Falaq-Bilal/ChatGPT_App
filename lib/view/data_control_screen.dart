@@ -96,14 +96,14 @@ class DataControlScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             ListTile(
               title: Text(
                 "Include your audio recordings from voice mode to train our models. Transcripts and other files are covered by Improve the model for everyone. Learn more",
                 style: Themes.textStyle(fontSize: 15, color: Themes.white),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             ListTile(
               title: Text(
                 "Chat History",
@@ -114,13 +114,13 @@ class DataControlScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             ListTile(title: Text("View archived Chats"  , style: Themes.textStyle(color: Themes.white))),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             CustomArchive(),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             CustomClearchat(),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             ListTile(
               title: Text(
                 "Account",
@@ -131,9 +131,9 @@ class DataControlScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             CustomExport(),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             CustomDeleteAcc(),
             SizedBox(height: 15),
           ],

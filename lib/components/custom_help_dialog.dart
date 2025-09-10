@@ -50,9 +50,10 @@ void openHelpDialog(BuildContext context) {
               leading: Icon(Icons.download_outlined, color: Colors.white),
               title: Text("Download Apps",
                   style: TextStyle(color: Colors.white)),
-              onTap: () {
+              onTap: () async{
                 Navigator.pop(context);
-                // TODO: Download Apps action
+                final Uri url = Uri.parse("https://chatgpt.com/download");
+                await launchUrl(url);
               },
             ),
             ListTile(
