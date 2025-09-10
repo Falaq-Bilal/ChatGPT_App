@@ -1,3 +1,4 @@
+import 'package:chatgpt_app/utils/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -29,7 +30,7 @@ void openHelpDialog(BuildContext context) {
             ListTile(
               leading: Icon(Icons.article_outlined, color: Colors.white),
               title: Text("Release Notes",
-                  style: TextStyle(color: Colors.white)),
+                  style: Themes.regular(color: Colors.white)),
               onTap: ()async {
                 Navigator.pop(context);
                  final Uri url = Uri.parse("https://help.openai.com/en/articles/6825453-chatgpt-release-notes");
@@ -39,7 +40,7 @@ void openHelpDialog(BuildContext context) {
             ListTile(
               leading: Icon(Icons.privacy_tip_outlined, color: Colors.white),
               title: Text("Terms & Policies",
-                  style: TextStyle(color: Colors.white)),
+                  style: Themes.regular(color: Colors.white)),
               onTap: ()async {
                 Navigator.pop(context);
                  final Uri url = Uri.parse("https://openai.com/en-GB/policies/terms-of-use/");
@@ -49,7 +50,7 @@ void openHelpDialog(BuildContext context) {
             ListTile(
               leading: Icon(Icons.download_outlined, color: Colors.white),
               title: Text("Download Apps",
-                  style: TextStyle(color: Colors.white)),
+                  style: Themes.regular(color: Themes.white)),
               onTap: () async{
                 Navigator.pop(context);
                 final Uri url = Uri.parse("https://chatgpt.com/download");
@@ -57,9 +58,9 @@ void openHelpDialog(BuildContext context) {
               },
             ),
             ListTile(
-              leading: Icon(Icons.keyboard_alt_outlined, color: Colors.white),
+              leading: Icon(Icons.keyboard_alt_outlined, color: Themes.white),
               title: Text("Keyboard Shortcuts",
-                  style: TextStyle(color: Colors.white)),
+                  style: Themes.regular(color: Themes.white)),
               onTap: () {
                 Navigator.pop(context);
               
