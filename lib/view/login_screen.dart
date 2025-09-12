@@ -25,9 +25,9 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: Text(
                   "ChatGPT",
-                  style: Themes.textStyle(
+                  style: Themes.semiBold(
                     fontSize: 18,
-                    fontWeight: FontWeight.w600,
+                //   fontWeight: FontWeight.w600,
                     color: Themes.black,
                   ),
                 ),
@@ -37,9 +37,9 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: Text(
                   "Log in or Sign Up",
-                  style: Themes.textStyle(
+                  style: Themes.semiBold(
                     fontSize: 23,
-                    fontWeight: FontWeight.bold,
+                  //  fontWeight: FontWeight.bold,
                     color: Themes.black,
                   ),
                 ),
@@ -97,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                     );
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text("Please enter your email")),
+                       SnackBar(content: Text("Please enter your email" , style: Themes.regular(),)),
                     );
                   }
                 },
@@ -107,9 +107,9 @@ class LoginScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(child: Divider(color: Themes.grey)),
-                  const Padding(
+                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Text("OR"),
+                    child: Text("OR", style: Themes.regular(),),
                   ),
                   Expanded(child: Divider(color: Themes.grey)),
                 ],

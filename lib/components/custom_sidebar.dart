@@ -78,6 +78,10 @@ class CustomSidebar extends StatelessWidget {
 
                   ListTile(
                     title: Text("Role of Scaffold in Flutter" , style: Themes.regular(fontSize: 18 , color: Themes.white),),
+                  ),
+
+                   ListTile(
+                    title: Text("Difference between stateful and stateless widget" , style: Themes.regular(fontSize: 18 , color: Themes.white),),
                   )
                 ],
               ),

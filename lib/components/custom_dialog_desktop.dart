@@ -10,10 +10,10 @@ class BottomLeftDialog {
   static void show(BuildContext context) {
     showDialog(
       context: context,
-      barrierColor: Colors.transparent, // background transparent
+      barrierColor: Colors.transparent, 
       builder: (context) {
         return Align(
-          alignment: Alignment.bottomLeft, // 👈 bottom-left me fix kar diya
+          alignment: Alignment.bottomLeft,
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Material(

@@ -31,8 +31,6 @@ class ReportDialog extends StatelessWidget {
             Text("Why are you reporting this conversation?",
                 style: Themes.regular(color: Colors.white, fontSize: 15)),
             const SizedBox(height: 16),
-
-            // 🔹 Main options
             ...options.map(
               (item) => InkWell(
                 onTap: () {

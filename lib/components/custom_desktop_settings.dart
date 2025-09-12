@@ -12,7 +12,7 @@ class DesktopSettingsDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dialog(
       backgroundColor: Themes.black,
-      insetPadding: const EdgeInsets.all(30), // dialog screen ke center me
+      insetPadding: const EdgeInsets.all(30),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
@@ -21,7 +21,7 @@ class DesktopSettingsDialog extends StatelessWidget {
         height: 600,
         child: Column(
           children: [
-            // custom appbar like header
+
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(

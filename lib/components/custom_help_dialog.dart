@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 void openHelpDialog(BuildContext context) {
   showModalBottomSheet(
     context: context,
-    backgroundColor: Colors.grey[900], // dark theme
+    backgroundColor: Colors.grey[900], 
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
     ),
@@ -14,7 +14,7 @@ void openHelpDialog(BuildContext context) {
       return Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
-          mainAxisSize: MainAxisSize.min, // jitna content utna height
+          mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
               leading: Icon(Icons.help_outline, color: Colors.white),

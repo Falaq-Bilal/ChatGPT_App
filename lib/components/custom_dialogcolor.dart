@@ -17,7 +17,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
   @override
   void initState() {
     super.initState();
-    selectedScheme = widget.initialValue; // default value
+    selectedScheme = widget.initialValue; 
   }
 
   @override
@@ -28,7 +28,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          RadioListTile<String>(
+          RadioListTile(
             title: Text("System (Default)" , style: Themes.regular(color: Themes.white),),
             value: "System",
             groupValue: selectedScheme,
@@ -63,7 +63,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.pop(context, selectedScheme); // return selected value
+                Navigator.pop(context, selectedScheme); 
               },
               child: Text("OK", style: Themes.regular(color: Themes.white),),
             ),

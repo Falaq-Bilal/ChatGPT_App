@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "What is Flutter?",
-                      style: Themes.textStyle(fontSize: 16, color: Themes.white),
+                      style: Themes.regular(fontSize: 16, color: Themes.white),
                     ),
                   ),
                 ],
@@ -85,9 +85,9 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "Flutter is an open-source UI (User Interface) framework developed by Google for building natively compiled applications for mobile (iOS, Android), web, and desktop from a single codebase. In simpler terms, it allows developers to write one code and run it almost anywhere.",
-                style: Themes.textStyle(
+                style: Themes.regular(
                   fontSize: 16,
-                  fontWeight: FontWeight.normal,
+                //  fontWeight: FontWeight.normal,
                   color: Themes.white,
                 ),
               ),
@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "What is Flutter?",
-                      style: Themes.textStyle(fontSize: 16, color: Themes.white),
+                      style: Themes.regular(fontSize: 16, color: Themes.white),
                     ),
                   ),
                 ],
@@ -112,9 +112,9 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "Flutter is an open-source UI (User Interface) framework developed by Google for building natively compiled applications for mobile (iOS, Android), web, and desktop from a single codebase. In simpler terms, it allows developers to write one code and run it almost anywhere.",
-                style: Themes.textStyle(
+                style: Themes.regular(
                   fontSize: 16,
-                  fontWeight: FontWeight.normal,
+                //  fontWeight: FontWeight.normal,
                   color: Themes.white,
                 ),
               ),
@@ -257,7 +257,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          // ✅ TextField properly fixed
                           Expanded(
                             child: TextField(
                               decoration: InputDecoration(

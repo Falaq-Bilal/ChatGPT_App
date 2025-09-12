@@ -11,7 +11,7 @@ class CustomPopupmenu extends StatefulWidget {
 class _AccentColorTileState extends State<CustomPopupmenu> {
   String selected = "Default";
 
-  // Colors list
+
   final Map<String, Color> colorOptions = {
     "Default": Colors.grey,
     "Blue": Themes.blue,
@@ -60,7 +60,6 @@ class _AccentColorTileState extends State<CustomPopupmenu> {
           }).toList();
         },
       ),
-      // 👇 pura tile tap hoga to kuch nahi hoga
       onTap: () {},
     );
   }

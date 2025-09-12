@@ -1,10 +1,8 @@
-
 import 'package:chatgpt_app/components/custom_report.dart';
 import 'package:flutter/material.dart';
 import 'package:chatgpt_app/utils/themes.dart';
 import 'report_dialog.dart';
 
-/// 🔹 Detail Dialog for Sub-options
 class ReportDetailScreen extends StatelessWidget {
   final String title;
   final List<String> subOptions;
@@ -28,14 +26,13 @@ class ReportDetailScreen extends StatelessWidget {
         ),
         child: Column(
           children: [
-            // 🔹 AppBar with Back button
             Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
               decoration: BoxDecoration(
                 color: Colors.grey[850],
-                borderRadius:
-                    const BorderRadius.vertical(top: Radius.circular(20)),
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(20),
+                ),
               ),
               child: Row(
                 children: [
@@ -52,15 +49,13 @@ class ReportDetailScreen extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
-                      style:
-                          Themes.semiBold(color: Colors.white, fontSize: 18),
+                      style: Themes.semiBold(color: Colors.white, fontSize: 18),
                     ),
                   ),
                 ],
               ),
             ),
 
-            // 🔹 Sub-options list
             Expanded(
               child: ListView.builder(
                 itemCount: subOptions.length,
@@ -68,15 +63,18 @@ class ReportDetailScreen extends StatelessWidget {
                   return ListTile(
                     title: Text(
                       subOptions[index],
-                      style:
-                          Themes.regular(color: Colors.white, fontSize: 14),
+                      style: Themes.regular(color: Colors.white, fontSize: 14),
                     ),
-                    trailing: const Icon(Icons.arrow_forward_ios,
-                        color: Colors.white, size: 16),
+                    trailing: const Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                      size: 16,
+                    ),
                     onTap: () {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                            content: Text("Selected: ${subOptions[index]}")),
+                          content: Text("Selected: ${subOptions[index]}"),
+                        ),
                       );
                     },
                   );

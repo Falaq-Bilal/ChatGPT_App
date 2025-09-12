@@ -33,21 +33,21 @@ class InstructionScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Introducing",
-                    style: Themes.textStyle(fontSize: 24, color: Themes.white),
+                    style: Themes.regular(fontSize: 24, color: Themes.white),
                   ),
                   SizedBox(height: 5),
                   Text("Custom",
-                      style: Themes.textStyle(fontSize: 24, color: Themes.white)),
+                      style: Themes.regular(fontSize: 24, color: Themes.white)),
                   SizedBox(height: 5),
                   Text(
                     "Instructions",
-                    style: Themes.textStyle(fontSize: 24, color: Themes.white),
+                    style: Themes.regular(fontSize: 24, color: Themes.white),
                   ),
                   SizedBox(height: 20),
                   Text(
                     "Customize your interactions with ChatGPT by providing specific details and guidelines for your chats.",
                     style:
-                        Themes.textStyle(fontSize: 15, color: Themes.darkgrey),
+                        Themes.regular(fontSize: 15, color: Themes.darkgrey),
                   ),
                   SizedBox(height: 20),
                   ListTile(
@@ -55,18 +55,18 @@ class InstructionScreen extends StatelessWidget {
                       backgroundColor: Themes.black,
                       child: Icon(Icons.chat_bubble_outline , color: Themes.white,),
                     ),
-                    title: Text("Active for new chats" , style: Themes.textStyle(color: Themes.white),),
+                    title: Text("Active for new chats" , style: Themes.regular(color: Themes.white),),
                     subtitle: Text(
-                        "Whenever you edit your custom instructions, they'll take effect in all new chats you create. Older conversations won't be updated" , style: TextStyle(color: Themes.white),),
+                        "Whenever you edit your custom instructions, they'll take effect in all new chats you create. Older conversations won't be updated" , style: Themes.regular(color: Themes.white),),
                   ),
                   ListTile(
                     leading: CircleAvatar(
                       backgroundColor: Themes.black,
                       child: Icon(Icons.play_circle_outlined , color: Themes.white,),
                     ),
-                    title: Text("Help improve our models" , style: Themes.textStyle(color: Themes.white),),
+                    title: Text("Help improve our models" , style: Themes.regular(color: Themes.white),),
                     subtitle: Text(
-                        "Your instructions will make our models better. Visit our Help Center to learn more about how your data will be used" , style: Themes.textStyle(color: Themes.white),),
+                        "Your instructions will make our models better. Visit our Help Center to learn more about how your data will be used" , style: Themes.regular(color: Themes.white),),
                   ),
                 ],
               ),

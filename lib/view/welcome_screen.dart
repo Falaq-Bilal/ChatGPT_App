@@ -75,7 +75,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     style: Themes.semiBold(
                       fontSize: 28,
                   
-                      color: _textColors[_index], // text color change hoga
+                      color: _textColors[_index], 
                     ),
                   ),
                 ),
