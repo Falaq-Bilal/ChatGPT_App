@@ -1,4 +1,5 @@
 import 'package:chatgpt_app/utils/themes.dart';
+import 'package:chatgpt_app/view/library_screen.dart';
 import 'package:chatgpt_app/view/settings_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -59,6 +60,10 @@ class MyCustomDrawer extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.library_music , color: Themes.white,),
                     title: Text("Library",style: Themes.regular(fontSize: 15 , color: Themes.white)),
+                    onTap: (){
+                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LibraryScreen()));
+                    },
                   ),
                   ListTile(
                     leading: Image(

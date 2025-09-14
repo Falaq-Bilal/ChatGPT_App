@@ -27,6 +27,12 @@ class BottomLeftDialog {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ListTile(
+                      leading: Icon(Icons.person_outline , color: Themes.grey,),
+                      title: Text("falaqdevsinn@gmail.com" ,  style: Themes.regular( fontSize:12,color: Themes.grey
+                      ),),
+                    ),
+                    Divider(color: Colors.white24,), 
+                    ListTile(
                       leading: const Icon(Icons.upgrade, color: Themes.white),
                       title:  Text("Upgrade Plan",
                           style: Themes.regular(color: Colors.white)),

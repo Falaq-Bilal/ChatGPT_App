@@ -1,13 +1,20 @@
+import 'package:chatgpt_app/components/custom_connected_apps.dart';
+import 'package:chatgpt_app/components/custom_data_controls.dart';
+import 'package:chatgpt_app/components/custom_general.dart';
+import 'package:chatgpt_app/components/custom_notifications.dart';
+import 'package:chatgpt_app/components/custom_personalization.dart';
+import 'package:chatgpt_app/components/custom_security.dart';
 import 'package:chatgpt_app/utils/themes.dart';
-import 'package:chatgpt_app/view/about_screen.dart';
-import 'package:chatgpt_app/view/data_control_screen.dart';
-import 'package:chatgpt_app/view/personalized_screen.dart';
-import 'package:chatgpt_app/view/security_screen.dart';
 import 'package:flutter/material.dart';
 
-class DesktopSettingsDialog extends StatelessWidget {
+class DesktopSettingsDialog extends StatefulWidget {
   const DesktopSettingsDialog({super.key});
 
+  @override
+  State<DesktopSettingsDialog> createState() => _DesktopSettingsDialogState();
+}
+Widget? selectedScreen;
+class _DesktopSettingsDialogState extends State<DesktopSettingsDialog> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -17,11 +24,11 @@ class DesktopSettingsDialog extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: SizedBox(
-        width: 500,
+        width: 700,
         height: 600,
         child: Column(
           children: [
-
+            // Header
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
@@ -52,91 +59,93 @@ class DesktopSettingsDialog extends StatelessWidget {
               ),
             ),
 
-            // list items
+            // Body Row: Left options + Right blank screen
             Expanded(
-              child: ListView(
+              child: Row(
                 children: [
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      child: Icon(Icons.settings, color: Themes.white),
+                  // LEFT SIDE (40%) → Options
+                  Container(
+                    width: 280,
+                    color: Themes.black,
+                    child: ListView(
+                      children: [
+                        ListTile(
+                          leading: Icon(Icons.settings, color: Themes.white),
+                          title: Text("General", style: Themes.regular(color: Themes.white)),
+                          onTap: (){
+                            
+                            setState(() {
+                              selectedScreen = GeneralSettings();
+                            });
+                            
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.notifications_none, color: Themes.white),
+                          title: Text("Notifications", style: Themes.regular(color: Themes.white)),
+                          onTap: (){
+                            setState(() {
+                              selectedScreen = NotificationsSettings(); 
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.person_outline_outlined, color: Themes.white),
+                          title: Text("Personalization", style: Themes.regular(color: Themes.white)),
+                          onTap: (){
+                            setState(() {
+                              selectedScreen = CustomPersonalization();
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: CircleAvatar(
+                            backgroundColor: Themes.black,
+                            backgroundImage: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDRHWUEkQklIPAQ7-TXHUjU1XQ_zaBndhQg&s",
+                            ),
+                          ),
+                          title: Text("Connected apps", style: Themes.regular(color: Themes.white)),
+                          onTap: (){
+                            setState(() {
+                              selectedScreen = CustomConnectedApps();
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.tune_outlined, color: Themes.white),
+                          title: Text("Data Controls", style: Themes.regular(color: Themes.white)),
+                          onTap: (){
+                            setState(() {
+                              selectedScreen =CustomDataControls(); 
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.security, color: Themes.white),
+                          title: Text("Security", style: Themes.regular(color: Themes.white)),
+                          onTap: (){
+                            setState(() {
+                              selectedScreen = CustomSecurity(); 
+                            });
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.info_outline, color: Themes.white),
+                          title: Text("Account", style: Themes.regular(color: Themes.white)),
+                        ),
+                      ],
                     ),
-                    title: Text("General",
-                        style: Themes.regular(color: Themes.white)),
-                        onTap: (){
-                          Navigator.pop(context);
-                        },
                   ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      child: Icon(Icons.notifications_none, color: Themes.white),
+
+                  // RIGHT SIDE 
+                  Expanded(
+                    child: Container(
+                      color: Themes.black,
+                      child: selectedScreen ?? SizedBox.shrink(),
                     ),
-                    title: Text("Notifications",
-                        style: Themes.regular(color: Themes.white)),
-                  ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      child: Icon(Icons.person_outline_outlined,
-                          color: Themes.white),
                     ),
-                    title: Text("Personalization",
-                        style:
-                            Themes.regular(fontSize: 15, color: Themes.white)),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      backgroundImage: NetworkImage(
-                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDRHWUEkQklIPAQ7-TXHUjU1XQ_zaBndhQg&s"),
-                    ),
-                    title: Text("Connected apps",
-                        style: Themes.regular(color: Themes.white)),
-                        onTap: (){
-                          Navigator.pop(context);
-                        },
-                  ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      child: Icon(Icons.tune_outlined, color: Themes.white),
-                    ),
-                    title: Text("Data Controls",
-                        style:
-                            Themes.regular(fontSize: 15, color: Themes.white)),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      child: Icon(Icons.security, color: Themes.white),
-                    ),
-                    title: Text("Security",
-                        style:
-                            Themes.regular(fontSize: 15, color: Themes.white)),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Themes.black,
-                      child: Icon(Icons.info_outline, color: Themes.white),
-                    ),
-                    title: Text("Account",
-                        style:
-                            Themes.regular(fontSize: 15, color: Themes.white)),
-                    onTap: () {
-                      Navigator.pop(context);
-    
-                    },
-                  ),
+                  
                 ],
               ),
             ),
@@ -145,13 +154,4 @@ class DesktopSettingsDialog extends StatelessWidget {
       ),
     );
   }
-}
-
-// Use this anywhere:
-void openDesktopSettings(BuildContext context) {
-  showDialog(
-    context: context,
-    barrierColor: Colors.black.withOpacity(0.4),
-    builder: (context) => const DesktopSettingsDialog(),
-  );
 }
