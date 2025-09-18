@@ -59,7 +59,7 @@ class _ChatgptDesktopState extends State<ChatgptDesktop> {
                             const Icon(Icons.arrow_upward_sharp,
                                 color: Colors.white),
                             const SizedBox(width: 10),
-                            MoreOptionsMenu(),
+                            MoreOptionsMenu()
                           ],
                         ),
                       ],
@@ -316,7 +316,7 @@ Packages & Plugins → Huge ecosystem of community and official plugins (e.g., F
                                           size: 24,
                                         ),
                                       )
-                                    :Icon(Icons.voice_chat , color: Themes.white,)
+                                    :Icon(Icons.voice_chat , color: Themes.grey,)
                               ],
                             ),
                           ),

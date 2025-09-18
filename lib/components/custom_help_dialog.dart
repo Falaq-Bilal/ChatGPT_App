@@ -19,7 +19,7 @@ void openHelpDialog(BuildContext context) {
             ListTile(
               leading: Icon(Icons.help_outline, color: Colors.white),
               title: Text("Help Center",
-                  style: TextStyle(color: Colors.white)),
+                  style: Themes.regular(color: Colors.white)),
               onTap: ()  async{
                 final Uri url = Uri.parse("https://help.openai.com/en/collections/5461535-android-app");
                 await launchUrl(url);
