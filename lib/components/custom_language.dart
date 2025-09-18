@@ -25,7 +25,7 @@ class _LanguageTileState extends State<LanguageTile> {
       builder: (context) {
         String temp = selectedLanguage;
         return AlertDialog(
-          backgroundColor: Themes.darkgrey,
+          backgroundColor: Themes.darkgrey1,
           title:  Text("Input Language"  , style: Themes.regular(color: Themes.white)),
           content: Column(
             mainAxisSize: MainAxisSize.min,

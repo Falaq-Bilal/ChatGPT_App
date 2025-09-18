@@ -31,7 +31,7 @@ class _AccentColorTileState extends State<CustomPopupmenu> {
       title:  Text("Accent Color", style: Themes.regular(fontSize: 17 ,  color: Themes.white)),
       subtitle: Text(selected , style: Themes.regular(color: Themes.white),),
       trailing: PopupMenuButton<String>(
-        color: Themes.darkgrey,
+        color: Themes.darkgrey1,
         borderRadius: BorderRadius.circular(30),
         icon: const Icon(Icons.keyboard_arrow_down , color: Themes.white,),
         onSelected: (value) {

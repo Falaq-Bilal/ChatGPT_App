@@ -35,7 +35,7 @@ class _LanguageDialogState extends State<CustomLanguagedialog> {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Text("App Language" , style: Themes.regular(color: Themes.white),),
-      backgroundColor: Themes.darkgrey,
+      backgroundColor: Themes.darkgrey1,
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,

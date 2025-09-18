@@ -10,7 +10,7 @@ class MoreOptionsMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopupMenuButton(
       icon: Icon(Icons.more_vert_rounded, color: Themes.white),
-      color: Themes.darkgrey,
+      color: Themes.darkgrey1,
       borderRadius: BorderRadius.circular(20),
       onSelected: (value) {
         if (value == 'Share') {

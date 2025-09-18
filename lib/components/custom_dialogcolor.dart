@@ -23,7 +23,7 @@ class _ColorSchemeDialogState extends State<ColorSchemeDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Themes.darkgrey,
+      backgroundColor: Themes.darkgrey1,
       title: Text("Color Scheme" , style: Themes.regular(color: Themes.white),),
       content: Column(
         mainAxisSize: MainAxisSize.min,
