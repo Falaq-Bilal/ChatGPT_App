@@ -7,7 +7,7 @@ class CustomConnectedApps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Themes.black,
+      color: Themes.darkgrey1,
       padding: const EdgeInsets.all(16),
       child: 
       SingleChildScrollView(
@@ -34,7 +34,7 @@ class CustomConnectedApps extends StatelessWidget {
               trailing: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-        backgroundColor: Themes.black,   
+        backgroundColor: Themes.darkgrey1,   
         foregroundColor: Themes.white,   
         side: BorderSide(color: Colors.white24), 
         shape: RoundedRectangleBorder(
@@ -59,7 +59,7 @@ class CustomConnectedApps extends StatelessWidget {
               trailing: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-        backgroundColor: Themes.black,   
+        backgroundColor: Themes.darkgrey1,   
         foregroundColor: Themes.white,   
         side: BorderSide(color: Colors.white24), 
         shape: RoundedRectangleBorder(
@@ -84,7 +84,7 @@ class CustomConnectedApps extends StatelessWidget {
               trailing: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-        backgroundColor: Themes.black,   
+        backgroundColor: Themes.darkgrey1,   
         foregroundColor: Themes.white,   
         side: BorderSide(color: Colors.white24), 
         shape: RoundedRectangleBorder(

@@ -4,9 +4,28 @@ import 'package:chatgpt_app/components/custom_sidebar.dart';
 import 'package:chatgpt_app/components/custom_appbar_popup.dart';
 import 'package:chatgpt_app/components/custom_optionbutton.dart';
 import 'package:chatgpt_app/components/custom_sheettile.dart';
+import 'package:share_plus/share_plus.dart'; // 👈 Share package import
 
-class ChatgptDesktop extends StatelessWidget {
+class ChatgptDesktop extends StatefulWidget {
   const ChatgptDesktop({super.key});
+
+  @override
+  State<ChatgptDesktop> createState() => _ChatgptDesktopState();
+}
+
+class _ChatgptDesktopState extends State<ChatgptDesktop> {
+  final TextEditingController _controller = TextEditingController();
+  bool _hasText = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(() {
+      setState(() {
+        _hasText = _controller.text.isNotEmpty;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +36,8 @@ class ChatgptDesktop extends StatelessWidget {
           children: [
             SizedBox(
               width: 250,
-        child: const CustomSidebar(),),
+              child: const CustomSidebar(),
+            ),
 
             // 🔹 Right Chat Area
             Expanded(
@@ -138,37 +158,37 @@ Packages & Plugins → Huge ecosystem of community and official plugins (e.g., F
                               InkWell(
                                 child: Icon(Icons.copy,
                                     size: 20, color: Colors.grey[600]),
-                                    onTap: (){},
+                                onTap: () {},
                               ),
                               const SizedBox(width: 12),
                               InkWell(
                                 child: Icon(Icons.thumb_up_alt_outlined,
                                     size: 20, color: Colors.grey[600]),
-                                    onTap: (){},
+                                onTap: () {},
                               ),
                               const SizedBox(width: 12),
                               InkWell(
                                 child: Icon(Icons.thumb_down_alt_outlined,
                                     size: 20, color: Colors.grey[600]),
-                                    onTap: (){},
+                                onTap: () {},
                               ),
                               const SizedBox(width: 12),
                               InkWell(
                                 child: Icon(Icons.volume_up,
                                     size: 20, color: Colors.grey[600]),
-                                    onTap: (){},
+                                onTap: () {},
                               ),
                               const SizedBox(width: 12),
                               InkWell(
                                 child: Icon(Icons.loop,
                                     size: 20, color: Colors.grey[600]),
-                                    onTap: (){},
+                                onTap: () {},
                               ),
                               const SizedBox(width: 12),
                               InkWell(
                                 child: Icon(Icons.share,
                                     size: 20, color: Colors.grey[600]),
-                                    onTap: (){},
+                                onTap: () {},
                               ),
                             ],
                           ),
@@ -202,11 +222,13 @@ Packages & Plugins → Huge ecosystem of community and official plugins (e.g., F
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                       BottomSheetTile(
+                                      BottomSheetTile(
                                           icon: Icons.attach_file,
                                           label: "Add photos & files",
                                           onTap: () {}),
-                                          Divider(color: Themes.darkgrey,),
+                                      Divider(
+                                        color: Themes.darkgrey,
+                                      ),
                                       const SizedBox(height: 20),
                                       BottomSheetTile(
                                           icon: Icons.lightbulb_outline,
@@ -247,7 +269,6 @@ Packages & Plugins → Huge ecosystem of community and official plugins (e.g., F
 
                         const SizedBox(width: 12),
 
-                        // TextField
                         Expanded(
                           child: Container(
                             height: 50,
@@ -261,6 +282,7 @@ Packages & Plugins → Huge ecosystem of community and official plugins (e.g., F
                               children: [
                                 Expanded(
                                   child: TextField(
+                                    controller: _controller,
                                     decoration: InputDecoration(
                                       hintText: "Ask anything",
                                       hintStyle: Themes.semiBold(
@@ -277,6 +299,24 @@ Packages & Plugins → Huge ecosystem of community and official plugins (e.g., F
                                 ),
                                 const Icon(Icons.mic_none_outlined,
                                     color: Colors.grey),
+                                const SizedBox(width: 8),
+
+                                // 🔹 Toggle Share Icon / NetworkImage
+                                _hasText
+                                    ? InkWell(
+                                        onTap: () {
+                                          if (_controller.text.isNotEmpty) {
+                                            Share.share(_controller.text);
+                                            _controller.clear();
+                                          }
+                                        },
+                                        child: const Icon(
+                                          Icons.arrow_upward,
+                                          color: Colors.white,
+                                          size: 24,
+                                        ),
+                                      )
+                                    :Icon(Icons.voice_chat , color: Themes.white,)
                               ],
                             ),
                           ),

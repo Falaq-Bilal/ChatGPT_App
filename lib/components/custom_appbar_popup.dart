@@ -1,4 +1,3 @@
-
 import 'package:chatgpt_app/components/custom_report.dart';
 import 'package:chatgpt_app/view/report_dialog.dart';
 import 'package:chatgpt_app/view/share_screen.dart';
@@ -7,7 +6,6 @@ import 'package:chatgpt_app/utils/themes.dart';
 
 class MoreOptionsMenu extends StatelessWidget {
   const MoreOptionsMenu({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
@@ -25,7 +23,6 @@ class MoreOptionsMenu extends StatelessWidget {
             context: context,
             builder: (context) {
               String newName = "";
-
               return StatefulBuilder(
                 builder: (context, setState) {
                   return AlertDialog(
@@ -76,7 +73,6 @@ class MoreOptionsMenu extends StatelessWidget {
             },
           );
         } else if (value == 'Archive') {
-        
         } else if (value == 'Delete') {
           showDialog(
             context: context,
@@ -86,25 +82,26 @@ class MoreOptionsMenu extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                
                 content: Text(
                   "Are you sure you want to delete this chat?\n\nTo clear any memories from this chat, visit your settings.",
-                  style: Themes.regular(
-                    color: Themes.white,
-                    fontSize: 14,
-                  ),
+                  style: Themes.regular(color: Themes.white, fontSize: 14),
                 ),
                 actionsAlignment: MainAxisAlignment.end,
                 actions: [
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text("Cancel", style: Themes.textStyle(color: Themes.white)),
+                    child: Text(
+                      "Cancel",
+                      style: Themes.textStyle(color: Themes.white),
+                    ),
                   ),
                   TextButton(
                     onPressed: () => Navigator.pop(context),
-                    child: Text("Delete", style: Themes.textStyle(color: Themes.red)),
+                    child: Text(
+                      "Delete",
+                      style: Themes.textStyle(color: Themes.red),
+                    ),
                   ),
-               
                 ],
               );
             },

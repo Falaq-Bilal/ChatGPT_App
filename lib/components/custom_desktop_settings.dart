@@ -1,3 +1,4 @@
+import 'package:chatgpt_app/components/custom_account.dart';
 import 'package:chatgpt_app/components/custom_connected_apps.dart';
 import 'package:chatgpt_app/components/custom_data_controls.dart';
 import 'package:chatgpt_app/components/custom_general.dart';
@@ -13,12 +14,15 @@ class DesktopSettingsDialog extends StatefulWidget {
   @override
   State<DesktopSettingsDialog> createState() => _DesktopSettingsDialogState();
 }
-Widget? selectedScreen;
+
 class _DesktopSettingsDialogState extends State<DesktopSettingsDialog> {
+  /// 👉 Yahan rakhna hai, global nahi
+  Widget? selectedScreen;
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      backgroundColor: Themes.black,
+      backgroundColor: Themes.darkgrey1,
       insetPadding: const EdgeInsets.all(30),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
@@ -31,9 +35,9 @@ class _DesktopSettingsDialogState extends State<DesktopSettingsDialog> {
             // Header
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+              decoration: const BoxDecoration(
+                color: Themes.darkgrey1,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
               ),
               child: Row(
                 children: [
@@ -59,40 +63,38 @@ class _DesktopSettingsDialogState extends State<DesktopSettingsDialog> {
               ),
             ),
 
-            // Body Row: Left options + Right blank screen
+            // Body Row: Left options + Right screen
             Expanded(
               child: Row(
                 children: [
                   // LEFT SIDE (40%) → Options
                   Container(
                     width: 280,
-                    color: Themes.black,
+                    color: Themes.darkgrey1,
                     child: ListView(
                       children: [
                         ListTile(
                           leading: Icon(Icons.settings, color: Themes.white),
                           title: Text("General", style: Themes.regular(color: Themes.white)),
-                          onTap: (){
-                            
+                          onTap: () {
                             setState(() {
                               selectedScreen = GeneralSettings();
                             });
-                            
                           },
                         ),
                         ListTile(
                           leading: Icon(Icons.notifications_none, color: Themes.white),
                           title: Text("Notifications", style: Themes.regular(color: Themes.white)),
-                          onTap: (){
+                          onTap: () {
                             setState(() {
-                              selectedScreen = NotificationsSettings(); 
+                              selectedScreen = NotificationsSettings();
                             });
                           },
                         ),
                         ListTile(
                           leading: Icon(Icons.person_outline_outlined, color: Themes.white),
                           title: Text("Personalization", style: Themes.regular(color: Themes.white)),
-                          onTap: (){
+                          onTap: () {
                             setState(() {
                               selectedScreen = CustomPersonalization();
                             });
@@ -100,13 +102,13 @@ class _DesktopSettingsDialogState extends State<DesktopSettingsDialog> {
                         ),
                         ListTile(
                           leading: CircleAvatar(
-                            backgroundColor: Themes.black,
+                            backgroundColor: Themes.darkgrey1,
                             backgroundImage: NetworkImage(
                               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDRHWUEkQklIPAQ7-TXHUjU1XQ_zaBndhQg&s",
                             ),
                           ),
                           title: Text("Connected apps", style: Themes.regular(color: Themes.white)),
-                          onTap: (){
+                          onTap: () {
                             setState(() {
                               selectedScreen = CustomConnectedApps();
                             });
@@ -115,37 +117,43 @@ class _DesktopSettingsDialogState extends State<DesktopSettingsDialog> {
                         ListTile(
                           leading: Icon(Icons.tune_outlined, color: Themes.white),
                           title: Text("Data Controls", style: Themes.regular(color: Themes.white)),
-                          onTap: (){
+                          onTap: () {
                             setState(() {
-                              selectedScreen =CustomDataControls(); 
+                              selectedScreen = CustomDataControls();
                             });
                           },
                         ),
                         ListTile(
                           leading: Icon(Icons.security, color: Themes.white),
                           title: Text("Security", style: Themes.regular(color: Themes.white)),
-                          onTap: (){
+                          onTap: () {
                             setState(() {
-                              selectedScreen = CustomSecurity(); 
+                              selectedScreen = CustomSecurity();
                             });
                           },
                         ),
                         ListTile(
                           leading: Icon(Icons.info_outline, color: Themes.white),
                           title: Text("Account", style: Themes.regular(color: Themes.white)),
+                          onTap: () {
+                            setState(() {
+                              selectedScreen = CustomAccount();
+                            });
+                          },
                         ),
                       ],
                     ),
                   ),
 
-                  // RIGHT SIDE 
+                  // RIGHT SIDE (fix applied ✅)
                   Expanded(
                     child: Container(
-                      color: Themes.black,
-                      child: selectedScreen ?? SizedBox.shrink(),
+                      color: Themes.darkgrey1,
+                      child: selectedScreen != null
+                          ? SizedBox.expand(child: selectedScreen!)
+                          : SizedBox.shrink(),
                     ),
-                    ),
-                  
+                  ),
                 ],
               ),
             ),

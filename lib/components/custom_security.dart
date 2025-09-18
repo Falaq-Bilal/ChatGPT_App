@@ -7,7 +7,7 @@ class CustomSecurity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-color: Themes.black,
+color: Themes.darkgrey1,
 padding: EdgeInsets.all(16),
 child: SingleChildScrollView(
   child: Column(
@@ -43,7 +43,7 @@ child: SingleChildScrollView(
                 trailing: ElevatedButton(
       onPressed: () {},
       style: ElevatedButton.styleFrom(
-        backgroundColor: Themes.black,   
+        backgroundColor: Themes.darkgrey1,   
         foregroundColor: Themes.white,   
         side: BorderSide(color: Colors.white24), 
         shape: RoundedRectangleBorder(
@@ -63,7 +63,7 @@ child: SingleChildScrollView(
                 trailing: ElevatedButton(
       onPressed: () {},
       style: ElevatedButton.styleFrom(
-        backgroundColor: Themes.black,   
+        backgroundColor: Themes.darkgrey1,   
         foregroundColor: Themes.white,   
         side: BorderSide(color: Colors.red), 
         shape: RoundedRectangleBorder(

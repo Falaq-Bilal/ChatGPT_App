@@ -7,7 +7,7 @@ class CustomDataControls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Themes.black,
+      color: Themes.darkgrey1,
       padding:EdgeInsets.all(16) ,
       child: Column(
         children: [
@@ -30,7 +30,7 @@ class CustomDataControls extends StatelessWidget {
               trailing: ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
-      backgroundColor: Themes.black,   
+      backgroundColor: Themes.darkgrey1,   
       foregroundColor: Themes.white,   
       side: BorderSide(color: Colors.white24), 
       shape: RoundedRectangleBorder(
@@ -49,7 +49,7 @@ class CustomDataControls extends StatelessWidget {
               trailing: ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
-      backgroundColor: Themes.black,   
+      backgroundColor: Themes.darkgrey1,   
       foregroundColor: Themes.white,   
       side: BorderSide(color: Colors.white24), 
       shape: RoundedRectangleBorder(
@@ -68,7 +68,7 @@ class CustomDataControls extends StatelessWidget {
               trailing: ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
-      backgroundColor: Themes.black,   
+      backgroundColor: Themes.darkgrey1,   
       foregroundColor: Themes.white,   
       side: BorderSide(color: Colors.white24), 
       shape: RoundedRectangleBorder(
@@ -87,7 +87,7 @@ class CustomDataControls extends StatelessWidget {
               trailing: ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
-      backgroundColor: Themes.black,   
+      backgroundColor: Themes.darkgrey1,   
       foregroundColor: Themes.white,   
       side: BorderSide(color: Colors.red), 
       shape: RoundedRectangleBorder(
@@ -106,7 +106,7 @@ class CustomDataControls extends StatelessWidget {
               trailing: ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
-      backgroundColor: Themes.black,   
+      backgroundColor: Themes.darkgrey1,   
       foregroundColor: Themes.white,   
       side: BorderSide(color: Colors.white24), 
       shape: RoundedRectangleBorder(

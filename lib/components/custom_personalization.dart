@@ -7,7 +7,7 @@ class CustomPersonalization extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Themes.black,
+      color: Themes.darkgrey1,
       padding: const EdgeInsets.all(16),
       child: 
       SingleChildScrollView(
@@ -67,7 +67,7 @@ class CustomPersonalization extends StatelessWidget {
                           width: 45,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Themes.grey,
+                            color: Themes.darkgrey,
                           ),
                           child: Align(
                             alignment: Alignment.centerLeft,
@@ -91,7 +91,7 @@ class CustomPersonalization extends StatelessWidget {
   trailing: ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
-      backgroundColor: Themes.black,   
+      backgroundColor: Themes.darkgrey1,   
       foregroundColor: Themes.white,   
       side: BorderSide(color: Colors.white24), 
       shape: RoundedRectangleBorder(

@@ -44,7 +44,7 @@ class MemoryScreen extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: Container(
                     height: 20,
-                    width: 25,
+                    width: 20,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Themes.white,
@@ -74,7 +74,7 @@ class MemoryScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Container(
                     height: 20,
-                    width: 25,
+                    width: 20,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Themes.white,

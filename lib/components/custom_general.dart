@@ -7,7 +7,7 @@ class GeneralSettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Themes.black,
+      color: Themes.darkgrey1,
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -31,7 +31,7 @@ class BottomLeftDialog {
                       title: Text("falaqdevsinn@gmail.com" ,  style: Themes.regular( fontSize:12,color: Themes.grey
                       ),),
                     ),
-                    Divider(color: Colors.white24,), 
+  
                     ListTile(
                       leading: const Icon(Icons.upgrade, color: Themes.white),
                       title:  Text("Upgrade Plan",
@@ -53,6 +53,7 @@ class BottomLeftDialog {
                       
                       },
                     ),
+                    Divider(color: Colors.white24,),
                     ListTile(
                       leading:  Icon(Icons.help_outline,
                           color: Colors.white),
