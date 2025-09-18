@@ -11,7 +11,7 @@ class LibraryScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(onPressed:(){
           Navigator.pop(context);
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatgptDesktop()));
+  
         }, icon: Icon(Icons.arrow_back_ios , color: Themes.white,)),
         title: Text("Images" , style: Themes.regular(fontSize: 24,color: Themes.white),),
         backgroundColor: Colors.black,
